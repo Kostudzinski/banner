@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Banner</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="banner cadxpert">
+
+        <div class="banner white-cover"></div>
+
+        <div class="banner main">
+
+            <div class="logo"></div>
+
+            <div class="banner printers"></div>
+
+            <div class="light-container">
+                <div class="light"></div>
+            </div>
+
+            <div class="banner text1"></div>
+
+            <div class="banner text2"></div>
+
+            <a href="http://bit.ly/StratasysF123-poradnik">
+                <div class="btn">
+                    <p>Pobierz bezpłatny poradnik</p>
+                </div>
+            </a>
+
+            <div class="cover"></div>
+
+        </div>
+
+    </div>
+
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        .cadxpert {
+            position: absolute;
+        }
+        
+        .banner {
+            width: 780px;
+            height: 150px;
+            font-family: 'Titillium Web', sans-serif;
+            overflow: hidden;
+        }
+        
+        .main {
+            background-image: url(img/back.png);
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            -webkit-animation: main 1s ease-in .2s;
+                    animation: main 1s ease-in .2s;
+            -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+        }
+        
+        .logo {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            background-image: url(img/logos.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 75%;
+            left: 5px;
+        }
+        
+        .text1 {
+            background-image: url(img/text1.png);
+            opacity: 0;
+            animation: text1 10s linear 2.2s infinite reverse;
+            position: absolute;
+            top: 0;
+        }
+        
+        .text2 {
+            background-image: url(img/text2.png);
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            -webkit-animation: text2 10s linear 2.2s infinite;
+                    animation: text2 10s linear 2.2s infinite;
+        }
+        
+        .printers {
+            opacity: 0;
+            background-image: url(img/printer.png);
+            -webkit-animation: show .5s ease-in 1.5s;
+                    animation: show .5s ease-in 1.5s;
+            -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+        }
+        
+        .cover {
+            position: absolute;
+            width: 25px;
+            height: 40px;
+            background-color: #fff;
+            right: 200px;
+            top: 25px;
+            -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+        }
+        
+        .white-cover {
+            background-color: #fff;
+            opacity: 1;
+            position: absolute;
+            z-index: .5;
+        }
+        
+        .light-container {
+            width: 30px;
+            height: 28px;
+            position: absolute;
+            left: 418px;
+            top: 32px;
+            overflow: hidden;
+        }
+        
+        .light {
+            width: 70px;
+            height: 17px;
+            position: relative;
+            right: -10px;
+            -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+            background-color: rgba(255, 255, 255, .3);
+            -webkit-animation: light 12s ease-in 3s infinite;
+                    animation: light 12s ease-in 3s infinite;
+        }
+
+        
+        .btn p {
+            margin: 0;
+            position: relative;
+            z-index: 1;
+            -webkit-transform: scale(-1, 1);
+            -ms-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+        }
+        
+        .btn {
+            border: none;
+            display: block;
+            text-align: center;
+            outline: none;
+            overflow: hidden;
+            position: absolute;
+            right: 25px;
+            top: 50px;
+            color: #fff;
+            font-weight: 700;
+            background-color: #003b5d;
+            padding: 17px 0px;
+            width: 190px;
+            height: 20px;
+            font-size: 13px;
+            -webkit-transform: scale(-1, 1);
+            -ms-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+        }
+        
+        .btn:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 490%;
+            width: 140%;
+            background: #62d2ed;
+            -webkit-transition: all .5s ease-in-out;
+            -o-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+            -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+            -ms-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+                transform: translateX(-98%) translateY(-25%) rotate(45deg);
+        }
+        
+        .btn:hover:after {
+            -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+            -ms-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+                transform: translateX(-9%) translateY(-25%) rotate(45deg);
+        }
+        
+        @-webkit-keyframes text1 {
+            0% {
+                opacity: 0;
+            }
+            55% {
+                opacity: 0;
+            }
+            60% {
+                opacity: 1;
+            }
+            95% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        @keyframes text1 {
+            0% {
+                opacity: 0;
+            }
+            55% {
+                opacity: 0;
+            }
+            60% {
+                opacity: 1;
+            }
+            95% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        @-webkit-keyframes text2 {
+            0% {
+                opacity: 0;
+            }
+            45% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            95% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        @keyframes text2 {
+            0% {
+                opacity: 0;
+            }
+            45% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            95% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        @-webkit-keyframes light {
+            0% {
+                right: -10px;
+            }
+            3% {
+                right: 65px;
+            }
+            50% {
+                right: 65px;
+            }
+            53% {
+                right: -10px;
+            }
+        }
+        
+        @keyframes light {
+            0% {
+                right: -10px;
+            }
+            3% {
+                right: 65px;
+            }
+            50% {
+                right: 65px;
+            }
+            53% {
+                right: -10px;
+            }
+        }
+        
+        @-webkit-keyframes show {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes show {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @-webkit-keyframes main {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes main {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+
+</body>
+
+</html>
